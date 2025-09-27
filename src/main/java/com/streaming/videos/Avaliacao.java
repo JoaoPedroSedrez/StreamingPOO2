@@ -10,7 +10,6 @@ import jakarta.persistence.JoinColumn;
 
 @Entity
 public class Avaliacao {
-    // Usaremos uma chave primária simples e autoincrementada (id).
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -24,9 +23,9 @@ public class Avaliacao {
     private Video video;
 
     @Column(nullable = false)
-    private Integer nota; // int no diagrama
+    private Integer nota;
 
-    @Column(columnDefinition = "TEXT") // text no diagrama
+    @Column(columnDefinition = "TEXT")
     private String comentario;
 
     public String getComentario() {

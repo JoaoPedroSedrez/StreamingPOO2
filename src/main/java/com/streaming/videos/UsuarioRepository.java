@@ -10,11 +10,6 @@ import java.util.Optional;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
-
-    /**
-     * Consulta 5: O usuário que mais assistiu vídeos.
-     * ALTERADO: O retorno deve ser List<Usuario> porque o método aceita Pageable.
-     */
     @Query("SELECT u FROM Usuario u JOIN u.perfis p JOIN p.visualizacoes v GROUP BY u.id ORDER BY COUNT(v.id) DESC")
     List<Usuario> findTopUsuarioByMaisVisualizacoes(Pageable pageable);
 }

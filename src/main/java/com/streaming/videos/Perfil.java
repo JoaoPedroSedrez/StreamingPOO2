@@ -23,13 +23,11 @@ public class Perfil {
 
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false)
-    private Usuario usuario; // Chave estrangeira para USUARIO
+    private Usuario usuario;
 
-    // Relacionamento Um-para-Muitos com com.streaming.videos.Visualizacao
     @OneToMany(mappedBy = "perfil", cascade = CascadeType.ALL)
     private List<Visualizacao> visualizacoes;
 
-    // Relacionamento Um-para-Muitos com com.streaming.videos.Avaliacao
     @OneToMany(mappedBy = "perfil", cascade = CascadeType.ALL)
     private List<Avaliacao> avaliacoes;
 

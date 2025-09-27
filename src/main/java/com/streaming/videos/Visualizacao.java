@@ -12,8 +12,6 @@ import java.time.LocalDateTime;
 
 @Entity
 public class Visualizacao {
-    // Chave primária composta (se for usar @IdClass ou @EmbeddedId), mas para simplicidade,
-    // usaremos uma chave primária simples e autoincrementada (id).
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -30,7 +28,7 @@ public class Visualizacao {
     private LocalDateTime dataHora;
 
     @Column(nullable = false)
-    private Integer progresso; // int no diagrama
+    private Integer progresso;
 
     public Integer getId() {
         return id;

@@ -25,17 +25,15 @@ public class Video {
     private String descricao;
 
     @Column(nullable = false)
-    private Integer duracao; // int no diagrama
+    private Integer duracao;
 
     @ManyToOne
     @JoinColumn(name = "categoria_id", nullable = false)
-    private Categoria categoria; // Chave estrangeira para CATEGORIA
+    private Categoria categoria;
 
-    // Relacionamento Um-para-Muitos com com.streaming.videos.Visualizacao
     @OneToMany(mappedBy = "video", cascade = CascadeType.ALL)
     private List<Visualizacao> visualizacoes;
 
-    // Relacionamento Um-para-Muitos com com.streaming.videos.Avaliacao
     @OneToMany(mappedBy = "video", cascade = CascadeType.ALL)
     private List<Avaliacao> avaliacoes;
 

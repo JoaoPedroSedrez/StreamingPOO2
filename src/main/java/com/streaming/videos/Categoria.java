@@ -18,7 +18,6 @@ public class Categoria {
     @Column(nullable = false, unique = true, length = 255)
     private String nome;
 
-    // Relacionamento Um-para-Muitos com com.streaming.videos.Video
     @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
     private List<Video> videos;
 

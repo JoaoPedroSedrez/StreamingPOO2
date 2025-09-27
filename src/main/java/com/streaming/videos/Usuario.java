@@ -7,8 +7,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.CascadeType;
 
-import java.time.LocalDateTime; // Corrige o erro de LocalDateTime
-import java.util.List; // Corrige o erro de List
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 public class Usuario {
@@ -28,7 +28,6 @@ public class Usuario {
     @Column(name = "data_cadastro", nullable = false)
     private LocalDateTime dataCadastro;
 
-    // Relacionamento Um-para-Muitos com com.streaming.videos.Perfil (Um Usuário possui Muitos Perfis)
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
     private List<Perfil> perfis;
 
