@@ -17,4 +17,7 @@ O sistema permite gerenciar **usuários, perfis, categorias, vídeos, visualiza�
 - **Visualizacao**
 - **Avaliacao**
 
+
+## Diagrama de Classe da UML:
+
 <img width="1279" height="330" alt="UML" src="https://github.com/user-attachments/assets/14e9e315-e2e9-443b-92f2-50696bc7c7c0" />
